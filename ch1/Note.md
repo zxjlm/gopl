@@ -16,4 +16,5 @@
 
 ## todo exercise
 
-6. colorful lissajous
+[6] colorful lissajous
+[11] long params
