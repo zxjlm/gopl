@@ -12,3 +12,8 @@
 %T          变量的类型
 %%          字面上的百分号标志（无操作数）
 ```
+
+
+## todo exercise
+
+6. colorful lissajous
