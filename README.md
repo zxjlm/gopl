@@ -9,3 +9,5 @@ Answers to some of the exercises in the <The Go Programming Language>, I am a be
 
 - [ ] [1.6] colorful lissajous
 - [ ] [1.11] long params
+
+- [ ] [3.2] other graphics (30%)
