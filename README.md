@@ -11,3 +11,5 @@ Answers to some of the exercises in the <The Go Programming Language>, I am a be
 - [ ] [1.11] long params
 
 - [ ] [3.2] other graphics (30%)
+- [ ] [3.3] 
+- [ ] [3.4]
