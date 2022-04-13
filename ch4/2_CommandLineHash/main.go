@@ -19,16 +19,17 @@ func main() {
 	if len(args) == 0 {
 		return
 	}
-	fmt.Println(args, *hashType)
-	if *hashType == "sha384" {
-		result := sha512.Sum384([]byte(args[0]))
-		fmt.Printf("%x\n", result)
-	} else if *hashType == "sha512" {
-		result := sha512.Sum512([]byte(args[0]))
-		fmt.Printf("%x\n", result)
-	} else {
-		result := sha256.Sum256([]byte(args[0]))
-		fmt.Printf("%x\n", result)
+	//fmt.Println(args[0], *hashType)
+
+	switch *hashType {
+	case "sha256":
+		fmt.Printf("%x\n", sha256.Sum256([]byte(args[0])))
+	case "sha384":
+		fmt.Printf("%x\n", sha512.Sum384([]byte(args[0])))
+	case "sha512":
+		fmt.Printf("%x\n", sha512.Sum512([]byte(args[0])))
+	default:
+		fmt.Println("invalid hash type")
 	}
 
 }
