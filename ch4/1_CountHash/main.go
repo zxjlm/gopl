@@ -11,10 +11,19 @@ func countHash(c1, c2 [32]byte) {
 	var count int
 	for i := 0; i < len(c1); i++ {
 		if c1[i] != c2[i] {
-			count++
+			count += diffBitCount(c1[i] ^ c2[i])
 		}
 	}
 	fmt.Printf("%d\n", count)
+}
+
+func diffBitCount(diff byte) int {
+	count := 0
+	for diff != 0 {
+		count++
+		diff &= diff - 1
+	}
+	return count
 }
 
 func main() {
@@ -25,6 +34,5 @@ func main() {
 	// Output:
 	// 2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881
 	// 4b68ab3847feda7d6c62c1fbcbeebfa35eab7351ed5e78f4ddadea5df64b8015
-	// false
-	// [32]uint8
+	// 125
 }
